@@ -1,15 +1,28 @@
+"use client";
+
 import memojiImage from "../assets/images/memoji-computer.png";
 import ArrowDown from "../assets/icons/arrow-down.svg";
 import grainImage from "../assets/images/grain.jpg";
 import StarIcon from "../assets/icons/star.svg";
 import SparkleIcon from "../assets/icons/sparkle.svg";
+import { useActiveSection } from "@/hooks/useActiveSection";
+import { ContactPopup } from "@/components/ContactPopup";
 import Image from "next/image";
 import { HeroOrbit } from "@/components/HeroOrbit";
+import { useState } from "react";
 
 export const HeroSection = () => {
+  const [popupOpen, setPopupOpen] = useState(false);
+  const { setActiveSection } = useActiveSection();
+
+  const handleExploreClick = () => {
+    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+    setTimeout(() => setActiveSection("projects"), 300);
+  };
+
   return <section className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip" id="home">
     <div data-sentinel className="h-[1px]" />
-    <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
+    <div className="absolute inset-0 pointer-events-none [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
       <div 
       className="absolute inset-0 -z-30 opacity-5" 
       style={{backgroundImage:`url(${grainImage.src})`}}>
@@ -60,21 +73,22 @@ export const HeroSection = () => {
         </div>
       </div>
       <div className="max-w-lg mx-auto">
-        <h1 className="font-serif text-center text-3xl md:text-5xl mt-8 tracking-wide">Building Exceptional User Experiences</h1>
+        <h1 className="font-serif text-center text-3xl md:text-5xl mt-8 tracking-wide">Full-Stack Developer - Web at Scale</h1>
         <p className="text-center mt-4 text-white/60 md:text-lg">
-          I specialize in transforming designs into functional, high-performing web applications.
-          Let's discuss your next project and how I can help bring your vision to life.
+        I build fast, secure, and scalable web apps using Next.js, PostgreSQL, and modern cloud tools.
         </p>
       </div>
       <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-        <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
+        <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl hover:cursor-pointer" onClick={handleExploreClick}>
           <span className="font-semibold">Explore My Work</span>
           <ArrowDown className="size-4"/>
         </button>
-        <button className="inline-flex items-center gap-2 border border-white px-6 h-12 bg-white rounded-xl text-gray-900">
+        <button className="inline-flex items-center gap-2 border border-white px-6 h-12 bg-white rounded-xl text-gray-900 hover:cursor-pointer" onClick={() => setPopupOpen(true)}>
             <span>👋</span>
           <span className="font-semibold">Let's Connect</span>
         </button>
+
+        <ContactPopup isOpen={popupOpen} onClose={() => setPopupOpen(false)} />
       </div>
     </div>
   </section>;
