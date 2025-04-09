@@ -48,7 +48,8 @@ const portfolioProjects = [
 ];
 
 export const ProjectsSection = () => {
-  return <section className="pb-16 lg:py-24">
+  return <section className="pb-16 lg:py-24" id="projects">
+    <div className="h-[1px]" data-sentinel />
     <div className="container">
       <SectionHeader
         eyebrow="Real-world Results"
