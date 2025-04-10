@@ -10,32 +10,28 @@ const MyApproach = () => {
     <section className="pb-16 lg:py-24">
         <div className="container">
       <SectionHeader
-          eyebrow="My Approach"
-          title="How I Bring Ideas to Life"
-          description="I build thoughtful solutions that align with your goals and deliver meaningful results."
+          eyebrow="How I Work"
+          title="From Challenge to Shipping"
+          description="Every product I build starts with a problem — solved with clear thinking, clean code, and consistent updates."          
         />
       {/* remove bg-white dark:bg-black */}
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
         {/* add des prop */}
         <Card
-          title="Planning & Strategy"
+          title="Understanding the Problem"
+          des="I treat every project like a challenge — I define the problem clearly, identify user needs, and set specific goals before I start typing code."          
           icon={<AceternityIcon order="Phase 1" />}
-          des="We'll collaborate to map out your website's goals, target audience, 
-          and key functionalities. We'll discuss things like site structure, 
-          navigation, and content requirements."
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
             // add these classed for the border rounded overflowing -> rounded-3xl overflow-hidden
-            containerClassName="bg-emerald-900 rounded-3xl overflow-hidden"
+            containerClassName="bg-emerald-300 rounded-3xl overflow-hidden"
           />
         </Card>
         <Card
-          title="Development & Progress Update"
+          title="Building With Precision"
+          des="Once the roadmap is clear, I break it into tasks and sprint — coding backend logic, frontend UI, and integrations using my go-to stack: Next.js, Prisma, and PostgreSQL."          
           icon={<AceternityIcon order="Phase 2" />}
-          des="Once we agree on the plan, I cue my lofi playlist and dive into
-          coding. From initial sketches to polished code, I keep you updated
-          every step of the way."
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -53,15 +49,13 @@ const MyApproach = () => {
           {/* <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" /> */}
         </Card>
         <Card
-          title="Development & Launch"
+          title="Launch & Iterate"
+          des="I deploy with Vercel or AWS, test for bugs, and optimize performance. I'm always up for feedback, version updates, or feature extensions."          
           icon={<AceternityIcon order="Phase 3" />}
-          des="This is where the magic happens! Based on the approved design, 
-          I'll translate everything into functional code, building your website
-          from the ground up."
         >
           <CanvasRevealEffect
             animationSpeed={3}
-            containerClassName="bg-sky-600 rounded-3xl overflow-hidden"
+            containerClassName="bg-sky-400 rounded-3xl overflow-hidden"
             colors={[[125, 211, 252]]}
           />
         </Card>
@@ -92,7 +86,7 @@ const Card = ({
       onMouseLeave={() => setHovered(false)}
       // change h-[30rem] to h-[35rem], add rounded-3xl
       className="border border-black/[0.2] group/canvas-card flex items-center justify-center
-       dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative lg:h-[35rem] rounded-3xl "
+       dark:border-white/[0.2] w-[300px] h-[25rem] p-4 relative lg:h-[35rem] rounded-3xl"
       style={{
         //   add these two
         //   you can generate the color from here https://cssgradient.io/
@@ -152,15 +146,15 @@ const Card = ({
 
 const AceternityIcon = ({ order }: { order: string }) => {
   return (
-    <div>
-      <button className="relative inline-flex overflow-hidden rounded-full p-[1px] ">
+    <div className="relative z-0"> {/* Add z-0 here to force lower stacking */}
+      <button className="relative inline-flex overflow-hidden rounded-full p-[1px] z-0">
         <span
-          className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite]
+          className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] z-0
          bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
         />
         <span
           className="inline-flex h-full w-full cursor-pointer items-center 
-        justify-center rounded-full bg-slate-950 px-5 py-2 text-purple backdrop-blur-3xl font-bold text-2xl"
+        justify-center rounded-full bg-slate-950 px-5 py-2 text-purple backdrop-blur-3xl font-bold text-2xl relative z-10"
         >
           {order}
         </span>
@@ -168,6 +162,7 @@ const AceternityIcon = ({ order }: { order: string }) => {
     </div>
   );
 };
+
 
 export const Icon = ({ className, ...rest }: any) => {
   return (
