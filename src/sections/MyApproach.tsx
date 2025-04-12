@@ -25,7 +25,7 @@ const MyApproach = () => {
           <CanvasRevealEffect
             animationSpeed={5.1}
             // add these classed for the border rounded overflowing -> rounded-3xl overflow-hidden
-            containerClassName="bg-emerald-300 rounded-3xl overflow-hidden"
+            containerClassName="bg-emerald-500 rounded-3xl overflow-hidden"
           />
         </Card>
         <Card
@@ -55,7 +55,7 @@ const MyApproach = () => {
         >
           <CanvasRevealEffect
             animationSpeed={3}
-            containerClassName="bg-sky-400 rounded-3xl overflow-hidden"
+            containerClassName="bg-sky-600 rounded-3xl overflow-hidden"
             colors={[[125, 211, 252]]}
           />
         </Card>
