@@ -14,7 +14,7 @@ export const ContactSection = () => {
       <div className="container">
         <div className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 py-8 px-10 rounded-3xl text-center md:text-left relative overflow-hidden z-0">
           <div
-            className="absolute inset-0 opacity-5 -z-10"
+            className="absolute inset-0 opacity-5 -z-10 pointer-events-none select-none bg-cover bg-center"
             style={{
               backgroundImage: `url(${grainImage.src})`,
             }}
