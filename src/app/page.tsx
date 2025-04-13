@@ -8,6 +8,7 @@ import { ContactSection } from "@/sections/Contact";
 import { Footer } from "@/sections/Footer";
 import { ExperienceSection } from "@/sections/Experience";
 import MyApproach from "@/sections/MyApproach";
+import { AchievementsSection } from "@/sections/Achievements";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <ExperienceSection />
       <TestimonialsSection />
       <AboutSection />
+      <AchievementsSection />
       <MyApproach />
       <ContactSection />
       <Footer />
