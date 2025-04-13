@@ -85,7 +85,7 @@ export const HeroSection = () => {
         </button>
         <button className="inline-flex items-center gap-2 border border-white px-6 h-12 bg-white rounded-xl text-gray-900 hover:cursor-pointer" onClick={() => setPopupOpen(true)}>
             <span>👋</span>
-          <span className="font-semibold">Let's Connect</span>
+          <span className="font-semibold">Let&apos;s Connect</span>
         </button>
 
         <ContactPopup isOpen={popupOpen} onClose={() => setPopupOpen(false)} />
