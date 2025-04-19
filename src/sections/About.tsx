@@ -143,26 +143,27 @@ export const AboutSection = () => {
               <CardHeader
                 title="Code & Rankings"
                 description="Where consistency meets curiosity."
-                className="px-4 pt-4 pb-2"
+                className="lg:py-6"
               />
 
-<div className="flex flex-wrap gap-2 px-4 pb-4 justify-center md:justify-start">
-{platforms.map(({ icon: Icon, title, rating }, i) => (
-  <div
-    key={i}
-    className="w-32 h-12 bg-white/5 border border-white/10 rounded-md px-2.5 py-1.5 flex items-center gap-1.5 text-white/80 backdrop-blur"
-  >
-    <Icon className="size-4 shrink-0 mr-2" /> {/* Render it as a component */}
-    <div className="text-[10px] leading-tight">
-      <div className="font-medium text-white text-xs">{title}</div>
-      <div>{rating}</div>
-    </div>
-  </div>
-))}
-</div>
-
-
+              <div className="grid grid-cols-2 gap-3 px-4 pb-4">
+                {platforms.map(({ icon: Icon, title, rating }, i) => (
+                  <div
+                    key={i}
+                    className="bg-white/5 border border-white/10 rounded-md px-2 py-3 flex items-center gap-2 text-white/80 backdrop-blur"
+                  >
+                    <Icon className="size-4 shrink-0 mr-2" />
+                    <div className="text-[10px] leading-tight">
+                      <div className="font-medium text-white text-xs">
+                        {title}
+                      </div>
+                      <div>{rating}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </Card>
+
             <Card className="h-[320px] md:col-span-3 lg:col-span-2">
               <CardHeader
                 className=""

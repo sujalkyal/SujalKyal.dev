@@ -59,12 +59,14 @@ export const TestimonialCTA = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center"
+            onClick={() => setOpen(false)}
           >
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
-              className="bg-[#0a0f1b] rounded-2xl w-full max-w-md p-6 shadow-2xl border border-white/10 text-white"
+              className="bg-[#0a0f1b] rounded-2xl w-full max-w-md sm:max-w-sm p-6 shadow-2xl border border-white/10 text-white"
+              onClick={(e) => e.stopPropagation()}
             >
               <h2 className="text-xl font-bold mb-4 text-white">
                 Share your thoughts

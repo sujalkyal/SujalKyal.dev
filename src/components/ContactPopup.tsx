@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { toast, Toaster } from "sonner";
 
 export const ContactPopup = ({
   isOpen,
@@ -34,6 +35,7 @@ export const ContactPopup = ({
         method: "POST",
         body: JSON.stringify(form),
       });
+      toast.success("Message sent successfully!");
       setIsSent(true);
       setTimeout(() => {
         onClose();
@@ -43,6 +45,7 @@ export const ContactPopup = ({
       }, 1500);
     } catch (err) {
       console.error("Failed to send", err);
+      toast.error("Failed to send message. Please try again.");
       setIsSending(false);
     }
   };
@@ -50,6 +53,23 @@ export const ContactPopup = ({
   if (!mounted) return null;
 
   return createPortal(
+    <>
+    <Toaster
+      position="top-right"
+      theme="dark"
+      toastOptions={{
+        unstyled: true,
+        classNames: {
+          toast:
+            "flex items-center space-x-4 bg-[#0a0f1b] text-white border border-white/10 shadow-lg rounded-lg p-4",
+          title: "text-white font-semibold",
+          description: "text-white/70 text-sm",
+          actionButton: "bg-white text-black px-3 py-1 rounded-md",
+          cancelButton: "bg-gray-700 text-white px-3 py-1 rounded-md",
+          closeButton: "text-white hover:text-gray-300",
+        },
+      }}
+    />
     <AnimatePresence>
       {isOpen && (
         <motion.div
@@ -115,7 +135,9 @@ export const ContactPopup = ({
           </motion.div>
         </motion.div>
       )}
-    </AnimatePresence>,
+    </AnimatePresence>
+    </>,
     document.body
+    
   );
 };
