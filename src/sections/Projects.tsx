@@ -1,6 +1,7 @@
 import paySwiftImage from "@/assets/images/paySwiftImage.jpg";
 import fundSparkImage from "@/assets/images/fundSparkImage.png";
 import kharidLoImage from "@/assets/images/kharidLoImage.png";
+import campusFlowImage from "@/assets/images/campusFlowImage.png";
 import CheckIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -12,9 +13,35 @@ const portfolioProjects = [
   {
     company: "Personal Project",
     year: "2025",
+    title: "CampusFlow - Management System",
+    description: "Full-stack management system for educational institutions.",
+    github: "https://github.com/sujalkyal/CampusFlow.git",
+    liveLinks: [
+      { label: "Teacher App", url: "https://campusflow-teacher.vercel.app/" },
+      { label: "Student App", url: "https://campusflow-student.vercel.app/" },
+    ],
+    results: [
+      {
+        title:
+          "Built role-based college system with teacher/student modules using Turborepo",
+      },
+      {
+        title:
+          "Designed PostgreSQL/Prisma database relationships for academic data management",
+      },
+      {
+        title:
+          "Created interactive UI with Framer Motion for file sharing and real-time updates",
+      },
+    ],
+    image: campusFlowImage,
+  },
+  {
+    company: "Personal Project",
+    year: "2025",
     title: "KharidLo – E-commerce Platform",
     description: "Full-stack e-commerce app with user and admin panels.",
-    github: "https://github.com/sujalkyal/Ecomm-MonoRepo",
+    github: "https://github.com/sujalkyal/KharidLo",
     liveLinks: [
       { label: "User App", url: "https://ecomm-user-app.vercel.app/" },
       { label: "Admin App", url: "https://ecomm-admin-app.vercel.app/" },
