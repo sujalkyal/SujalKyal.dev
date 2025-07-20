@@ -91,8 +91,8 @@ export const ContactPopup = ({
             <h2 className="text-2xl font-semibold mb-4">Let’s Connect</h2>
             <p className="text-sm text-white/60 mb-6">
               Drop me a message or reach me at{" "}
-              <a href="mailto:sujalkyal2704@gmail.com" className="text-emerald-400 underline">
-                sujalkyal2704@gmail.com
+              <a href="mailto:sujalkyal.dev@gmail.com" className="text-emerald-400 underline">
+                sujalkyal.dev@gmail.com
               </a>
             </p>
 

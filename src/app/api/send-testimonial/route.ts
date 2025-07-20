@@ -13,7 +13,7 @@ export async function POST(req: Request) {
   try {
     await resend.emails.send({
       from: "Testimonial Form <onboarding@resend.dev>",
-      to: "sujalkyal2704@gmail.com",
+      to: "sujalkyal.dev@gmail.com",
       subject: "New Testimonial Submission",
       html: `
         <h2>New Testimonial</h2>
