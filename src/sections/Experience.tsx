@@ -11,7 +11,12 @@ type WorkCard = {
 };
 
 const workExperience: WorkCard[] = [
-    
+  {
+    id: 1,
+    title: "Generate AI | Full Stack Intern @NinjaHire",
+    desc: "Developed a GPT-4 powered microservice for recruiter query handling with SQL generation, real-time responses, 3x latency reduction, and automated Railway deployment.",
+    thumbnail: "/exp1.svg",
+  },
 ];
 
 export const ExperienceSection = () => {
@@ -23,7 +28,7 @@ export const ExperienceSection = () => {
         <SectionHeader
           eyebrow="Professional Journey"
           title="Crafting Solutions, Building Impact"
-          description="With every role, I’ve focused on creating clean, efficient, and impactful code — 
+          description="With every role, I've focused on creating clean, efficient, and impactful code — 
                 contributing to products that users love."
         />
         <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">

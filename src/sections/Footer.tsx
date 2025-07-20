@@ -2,6 +2,10 @@ import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 
 const FooterLinks = [
   {
+    title: "X",
+    url: "https://x.com/Sujal_kyal",
+  },
+  {
     title: "GitHub",
     url: "https://github.com/sujalkyal",
   },
@@ -23,7 +27,7 @@ export const Footer = () => {
       <div className="border-t border-white/15 py-6 text-sm flex flex-col md:flex-row md:justify-between items-center gap-8">
         <div className="text-white/40">&copy; 2025. All rights reserved.</div>
         <p className="text-white/40 text-center md:text-left text-xs">
-          Currently open for freelance, internships, and collaborative projects.
+          Open for freelance, internships, and collaborative projects.
         </p>
         <nav className="flex flex-col md:flex-row items-center gap-8">
           {FooterLinks.map((link) => (

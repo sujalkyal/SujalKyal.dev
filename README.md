@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Sujal Kyal – Personal Portfolio
 
-First, run the development server:
+> Welcome to my personal portfolio website! This site is a showcase of my work, skills, and projects as a developer. Built with Next.js and Tailwind CSS, it’s designed to be fast, modern, and visually engaging.
+
+## 🚀 Features
+
+- Interactive homepage with smooth animations
+- Project gallery with details and images
+- Achievements and experience sections
+- Contact form for direct communication
+- Responsive design for all devices
+
+## 🛠️ Tech Stack
+
+- [Next.js](https://nextjs.org/) – React framework for fast, SEO-friendly sites
+- [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS for rapid UI development
+- [Framer Motion](https://www.framer.com/motion/) – Animations and transitions
+- [Three.js](https://threejs.org/) & [@react-three/fiber](https://docs.pmnd.rs/react-three-fiber) – 3D graphics
+- [TypeScript](https://www.typescriptlang.org/) – Type safety
+- [Resend](https://resend.com/) – Email sending for contact form
+
+## 📦 Getting Started
+
+To run locally:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Customization
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Feel free to fork or clone this repo and personalize it for your own portfolio. All main content is in the `src/` folder, with pages in `src/app/` and components in `src/components/`.
 
-## Learn More
+## 📬 Contact
 
-To learn more about Next.js, take a look at the following resources:
+- Twitter/X: [@Sujal_kyal](https://x.com/Sujal_kyal)
+- Website: [sujaldev-ten.vercel.app](https://sujaldev-ten.vercel.app/)
+- LinkedIn: [Sujal Kyal](http://linkedin.com/in/sujal-kyal-712b9024b)
+- GitHub: [sujalkyal](https://github.com/sujalkyal)
+- Email: [sujalkyal.dev@gmail.com](mailto:sujalkyal.dev@gmail.com)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📝 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is open source and free to use. If you use or modify it, a mention or link back is appreciated!

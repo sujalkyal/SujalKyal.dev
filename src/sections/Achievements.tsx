@@ -1,11 +1,7 @@
 "use client";
 
 import { Card } from "@/components/Card";
-import { CardHeader } from "@/components/CardHeader";
 import { SectionHeader } from "@/components/SectionHeader";
-import LeetCodeIcon from "@/assets/icons/leetcode.svg";
-import CodeforcesIcon from "@/assets/icons/codeforces.svg";
-import CodeChefIcon from "@/assets/icons/codechef.svg";
 import { Trophy, BadgeCheck, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -25,13 +21,13 @@ const achievements = [
     {
         title: "Competitive Programming",
         description:
-          "LeetCode Knight (1750+) • CodeChef 3★ (1787) • Codeforces Pupil • Global Ranks in contests",
+          "Knight @LeetCode(1860+) • 3★ @CodeChef(1787) • Pupil @Codeforces • Global Ranks in contests",
         icon: <Sparkles className="size-5 text-orange-400" />,
       },
       {
-        title: "700+ Problems Solved",
+        title: "1000+ Problems Solved",
         description:
-          "Solved 700+ problems across LeetCode, CodeChef, Codeforces, and GFG • Consistent CP practice",
+          "Solved 1000+ problems across LeetCode, CodeChef, Codeforces, and GFG • Consistent CP practice",
         icon: <BadgeCheck className="size-5 text-green-400" />,
       },
   ];

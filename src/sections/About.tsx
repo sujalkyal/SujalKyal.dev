@@ -120,8 +120,8 @@ const hobbies = [
 ];
 
 const platforms = [
-  { icon: LeetCodeIcon, title: "LeetCode", rating: "(1750)" },
-  { icon: CodeforcesIcon, title: "Codeforces", rating: "Pupil (1218)" },
+  { icon: LeetCodeIcon, title: "LeetCode", rating: "Knight (1860+)" },
+  { icon: CodeforcesIcon, title: "Codeforces", rating: "Pupil (1200+)" },
   { icon: CodeChefIcon, title: "CodeChef", rating: "3★ (1787)" },
 ];
 
